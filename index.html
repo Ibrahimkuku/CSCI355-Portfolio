@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- This helps my website display correctly on phones and tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This gives a short description of my portfolio website. -->
+    <meta
+        name="description"
+        content="Portfolio website for Ibrahim Oluwatoyosi Kuku, a Computer Science 
+        student interested in software development, Python, and cybersecurity.">
+
+    <title>Ibrahim Kuku | Portfolio</title>
+
+    <!-- This is the icon that appears on the browser tab. -->
+    <link rel="icon" href="project1icon.jpeg">
+
+    <!-- I use the Poppins font throughout my website. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- I use Font Awesome for the icons on my website. -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- This connects my CSS file to the HTML page. -->
+    <link rel="stylesheet" href="project1.css">
+</head>
+
+<body>
+
+    <!-- This is my navigation bar. -->
+    <header class="header">
+
+        <!-- Clicking my name takes the visitor back to the About section. -->
+        <a href="#about" class="logo">
+            Ibrahim Kuku
+        </a>
+
+        <!-- These links help visitors move to different parts of my portfolio. -->
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+
+            <!-- This button switches my website between dark mode and light mode. -->
+            <button class="icon-button" id="themeToggle" type="button">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <span id="themeLabel">Dark</span>
+            </button>
+
+            <!-- This button takes visitors to my GitHub profile. -->
+            <a
+                class="visit-btn"
+                href="https://github.com/"
+                target="_blank">
+                Visit GitHub
+            </a>
+
+            <!-- This button opens the navigation menu on smaller screens. -->
+            <button class="menu-button" id="menuButton" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- 
+             ABOUT ME SECTION
+         -->
+
+        <section id="about" class="about">
+
+            <div class="about-container">
+
+                <!-- This section displays my pictures as a carousel. -->
+                <div class="carousel">
+
+                    <!-- This button shows the previous picture. -->
+                    <button
+                        class="carousel-button"
+                        id="leftButton"
+                        type="button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-image-wrapper">
+
+                        <!-- JavaScript changes this image when the carousel buttons are clicked. -->
+                        <img
+                            id="ibrahimPhoto"
+                            src="project1icon.jpeg"
+                            alt="Portrait of Ibrahim Kuku">
+
+                        <!-- This shows which picture is currently being displayed. -->
+                        <p class="carousel-status" id="carouselStatus">
+                            Photo 1 of 3
+                        </p>
+
+                    </div>
+
+                    <!-- This button shows the next picture. -->
+                    <button
+                        class="carousel-button"
+                        id="rightButton"
+                        type="button">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- This section introduces me and explains my interests. -->
+                <div class="info-box">
+
+                    <div class="hero-text">
+                        <p class="eyebrow">Hello, I'm</p>
+
+                        <h1>Ibrahim Oluwatoyosi Kuku</h1>
+
+                        <h2>
+                            Computer Science Student at Queens College
+                        </h2>
+
+                        <p class="hero-description">
+                            I am a senior Computer Science student building
+                            practical skills in Python, web development,
+                            databases, and cybersecurity. I enjoy turning
+                            ideas into useful projects, learning new
+                            technologies, and solving technical problems
+                            step by step.
+                        </p>
+                    </div>
+
+
+                    <!-- These buttons allow visitors to view my resume or contact me. -->
+                    <div class="btn-group">
+
+                        <!-- This button downloads my resume file. -->
+                        <a
+                            class="btn primary-btn"
+                            href="IKCS.pdf"
+                            download>
+                            <i class="fa-solid fa-download"></i>
+                            Download Resume
+                        </a>
+
+                        <!-- This button moves the visitor to my contact section. -->
+                        <a class="btn secondary-btn" href="#contact">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+
+                    <!-- These icons link to my GitHub and LinkedIn profiles. -->
+                    <div class="socials">
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            aria-label="GitHub profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            aria-label="LinkedIn profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 
+             EXPERIENCE SECTION
+         -->
+
+        <section id="experience" class="experience">
+
+            <h2 class="section-title">Experience & Skills</h2>
+
+            <div class="experience-info">
+
+                <!-- I use cards to organize my education, skills, and experience. -->
+                <div class="grid">
+
+                    <!-- This card explains my Computer Science education. -->
+                    <article class="grid-card">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span>Computer Science</span>
+
+                        <h3>Queens College Senior</h3>
+
+                        <p>
+                            I am completing my undergraduate Computer Science
+                            studies at Queens College. My coursework includes
+                            programming, databases, probability and statistics,
+                            and other subjects that strengthen my analytical
+                            and problem-solving abilities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- This card explains my experience with Python and VPython. -->
+                    <article class="grid-card">
+
+                        <i class="fa-brands fa-python"></i>
+
+                        <span>Python Development</span>
+
+                        <h3>VPython and Project-Based Learning</h3>
+
+                        <p>
+                            I use Python to build programs and interactive
+                            visualizations. Through VPython, I have practiced
+                            translating mathematical and scientific ideas into
+                            code while improving my understanding of program
+                            structure, debugging, and logical thinking.
+                        </p>
+
+                    </article>
+
+
+                    <!-- This card explains my cybersecurity experience. -->
+                    <article class="grid-card">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>Cybersecurity</span>
+
+                        <h3>Webacy Web3 Security Externship</h3>
+
+                        <p>
+                            During my Webacy externship, I developed exposure
+                            to Web3 security concepts, risk analysis, and the
+                            process of reviewing digital assets for possible
+                            threats. The experience strengthened my interest
+                            in cybersecurity and responsible technology.
+                        </p>
+
+                    </article>
+
+
+                    <!-- This card explains the skills I gained from military service. -->
+                    <article class="grid-card">
+
+                        <i class="fa-solid fa-person-military-pointing"></i>
+
+                        <span>Leadership & Service</span>
+
+                        <h3>U.S. Army</h3>
+
+                        <p>
+                            My military experience has strengthened my
+                            discipline, teamwork, adaptability, and ability
+                            to remain focused under pressure. I bring those
+                            same qualities to my academic work, technical
+                            projects, and professional development.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- This displays another picture in my experience section. -->
+                <img
+                    class="experience-photo"
+                    src="IMG_3542.jpeg"
+                    alt="Ibrahim Kuku">
+
+            </div>
+        </section>
+
+
+        <!-- 
+             PROJECTS SECTION
+        -->
+
+        <section id="projects" class="projects">
+
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="project-grid">
+
+                <!-- This card displays information about my Python project. -->
+                <article class="project-card">
+
+                    <!-- This is the screenshot for my VPython project. -->
+                    <img
+                        src="Vpython.jpeg">
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Python / VPython
+                        </span>
+
+                        <h3>Interactive VPython Project</h3>
+
+                        <p>
+                            A Python project that uses VPython to create an
+                            interactive visual simulation. This project
+                            demonstrates calculations, animation, user
+                            interaction, and my ability to explain technical
+                            concepts visually.
+                        </p>
+
+
+                        <div class="btn-group">
+
+                            <!-- This button opens my project from its folder. -->
+                            <a
+                                class="btn primary-btn"
+                                href="projects/vpython/index.html">
+                                Open Project
+                            </a>
+
+                            <!-- This button takes visitors to the GitHub repository. -->
+                            <a
+                                class="btn secondary-btn"
+                                href="https://github.com/"
+                                target="_blank">
+                                GitHub Repo
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- 
+             CONTACT SECTION
+        -->
+
+        <section class="contact" id="contact">
+
+            <div class="contact-card">
+
+                <h2 class="section-title">Contact Me</h2>
+
+                <p>
+                    I am interested in opportunities to continue growing in
+                    software development, Python, and cybersecurity. Send me
+                    an email to discuss a project or opportunity.
+                </p>
+
+
+                <!-- Visitors can use this form to contact me. -->
+                <form id="contactForm" class="contact-form">
+
+                    <!-- This field collects the visitor's name. -->
+                    <label for="name">Name</label>
+
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        required>
+
+
+                    <!-- This field collects the visitor's email address. -->
+                    <label for="email">Email</label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="yourname@example.com"
+                        required>
+
+
+                    <!-- This field collects the visitor's message. -->
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message here"
+                        required
+                    ></textarea>
+
+
+                    <!-- This button submits the contact form. -->
+                    <button class="btn primary-btn" type="submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- 
+         FOOTER
+    -->
+
+    <footer>
+
+        <!-- These links help visitors move around the page. -->
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- JavaScript places the current year inside this span. -->
+        <p class="copyright">
+            &copy; 
+            Ibrahim Kuku. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- This connects my JavaScript file to the website. -->
+    <script src="project1.js"></script>
+
+</body>
+</html>
